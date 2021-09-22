@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ClicksAndroidTask</string>
+    <string name="source_name">Source name</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="news_image">News_Image</string>
+    <string name="news_time">news_time</string>
+    <string name="upload">upload</string>
+</resources>
