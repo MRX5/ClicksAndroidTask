@@ -9,6 +9,7 @@ import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.SearchView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.clicksandroidtask.R
 import com.example.clicksandroidtask.model.News
@@ -17,6 +18,7 @@ import com.example.clicksandroidtask.ui.adapter.onNewsClickListener
 import com.example.clicksandroidtask.ui.viewmodel.NewsViewModel
 import com.example.clicksandroidtask.utils.Constants
 import com.example.clicksandroidtask.utils.Status
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_news.*
 
@@ -66,7 +68,9 @@ class NewsActivity : AppCompatActivity(), onNewsClickListener {
                 }
                 Status.ERROR -> {
                     news_progress_bar.visibility = GONE
-                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    val snackBar = Snackbar.make(news_constraintLayout, getString(R.string.no_internet_connection), Snackbar.LENGTH_INDEFINITE)
+                    snackBar.show()
+                    snackBar.setAction(getString(R.string.dismiss)) { snackBar.dismiss() }
                 }
             }
         })
