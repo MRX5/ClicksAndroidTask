@@ -42,7 +42,7 @@ class NewsActivity : AppCompatActivity(), onNewsClickListener {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let { adapter.filter(newText) }
+                newText?.let { adapter.filter(newText.lowercase()) }
                 return false
             }
         })
