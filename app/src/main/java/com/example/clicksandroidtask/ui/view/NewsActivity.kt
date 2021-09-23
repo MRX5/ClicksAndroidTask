@@ -68,7 +68,7 @@ class NewsActivity : AppCompatActivity(), onNewsClickListener {
                 }
                 Status.ERROR -> {
                     news_progress_bar.visibility = GONE
-                    val snackBar = Snackbar.make(news_constraintLayout, getString(R.string.no_internet_connection), Snackbar.LENGTH_INDEFINITE)
+                    val snackBar = Snackbar.make(news_constraintLayout, getString(R.string.request_failed), Snackbar.LENGTH_INDEFINITE)
                     snackBar.show()
                     snackBar.setAction(getString(R.string.dismiss)) { snackBar.dismiss() }
                 }

@@ -6,7 +6,7 @@
     <string name="news_image">News_Image</string>
     <string name="news_time">news_time</string>
     <string name="upload">upload</string>
-    <string name="no_internet_connection">لايوجد اتصال بالإنترنت</string>
+    <string name="request_failed">حدث خطأ</string>
     <string name="dismiss">إغلاق</string>
 
 </resources>
